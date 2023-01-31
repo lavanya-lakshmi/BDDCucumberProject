@@ -17,11 +17,15 @@ public class Hooks extends BaseClass{
 		TestContext testContext;
 		public Hooks(TestContext context) {
 			testContext = context;
-			
 	}
 		@Before
 		public void setUp() {
 			driver = testContext.getWebDriverManagerSetup().getDriver();
+			//driver.manage().window().maximize();
+		}
+		
+		@Before(("not @demo"))
+		public void maximize() {
 			driver.manage().window().maximize();
 		}
 		

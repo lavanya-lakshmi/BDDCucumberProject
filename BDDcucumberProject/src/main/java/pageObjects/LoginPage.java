@@ -15,13 +15,13 @@ public class LoginPage {
 	}
 	
 	@FindBy(id="user-name")
-	WebElement username;
+	private WebElement username;
 	
 	@FindBy(id="password")
-	WebElement password;
+	private WebElement password;
 	
 	@FindBy(id="login-button")
-	 WebElement loginbutton;
+	private WebElement loginbutton;
 	
 	public void enterEmail(String user) {
 		username.sendKeys(user);

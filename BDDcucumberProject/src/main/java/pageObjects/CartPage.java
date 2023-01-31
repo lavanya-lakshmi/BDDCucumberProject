@@ -18,13 +18,13 @@ public class CartPage {
 	}
 	
 	@FindBy(xpath="//div[@id='cart_contents_container']//div[@class='cart_list']//div[@class='inventory_item_name']")
-	List<WebElement> cartItems;
+	private List<WebElement> cartItems;
 	
 	@FindBy(id="checkout")
-	WebElement checkoutbutn;
+	private WebElement checkoutbutn;
 	
 	@FindBy(xpath="//button[text()='Remove']")
-	List<WebElement> removeButns;
+	private List<WebElement> removeButns;
 	
 	public boolean addedToCart(List<String> added_items) {
 		boolean result = true;

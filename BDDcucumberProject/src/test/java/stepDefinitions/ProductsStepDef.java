@@ -6,6 +6,8 @@ import org.testng.Assert;
 
 import Context.TestContext;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -36,14 +38,13 @@ productsPg.clickOnCarticon();
 List<String> added_items = addeditems.asList();
 boolean result=cartPg.addedToCart(added_items);
 Assert.assertEquals(result, true);
-
 }
+
 ///////////////////Remove from cart///////////////////////
 @When("User click on remove button for Items")
 public void user_click_on_remove_button_for_items(DataTable addeditems) {
 List<String> added_items = addeditems.asList();
 cartPg.clickOnRemoveButn(added_items);
-
 }
 
 @Then("Items should be removed from cart")

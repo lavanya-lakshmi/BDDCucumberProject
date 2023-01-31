@@ -12,7 +12,7 @@ public class CheckoutOverviewPage {
 	}
 	
 	@FindBy(id="finish")
-	WebElement finishbutn;
+	private WebElement finishbutn;
 	
 	public void clickOnFinishButn() {
 		finishbutn.click();

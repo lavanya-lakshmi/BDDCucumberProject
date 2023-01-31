@@ -4,7 +4,7 @@ Scenario Outline: Validate Login with valid credentials
 
 Given Open the url "https://www.saucedemo.com/" 
 And user enter valid username "<username>" and password "<password>"
-And Click on login
+When Click on login
 Then User should be redirected to "https://www.saucedemo.com/inventory.html"
 
 Examples:
@@ -16,6 +16,5 @@ Examples:
 Scenario: Validate Login with invalid credentials 
 Given Open the url "https://www.saucedemo.com/" 
 And user enter invalid username "admin" and password "admin"
-And Click on login
+When Click on login
 Then Message should be "Username and password do not match any user in this service"
-

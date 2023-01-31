@@ -15,14 +15,14 @@ WebDriver driver;
 	}
 	
 	@FindBy(xpath="//div[@class='inventory_item_description']//div[@class='inventory_item_name']")
-	List<WebElement> productNames;
+	private List<WebElement> productNames;
 	
 	
 	@FindBy(xpath ="//div[@id='inventory_container']/div[@class='inventory_list']/div[@class='inventory_item']//button")
-	List<WebElement> addToCartButns;
+	private List<WebElement> addToCartButns;
 	
 	@FindBy(id="shopping_cart_container")
-	WebElement carticon;
+	private WebElement carticon;
 	
 	
 	

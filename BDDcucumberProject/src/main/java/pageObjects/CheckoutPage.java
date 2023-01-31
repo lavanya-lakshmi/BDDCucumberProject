@@ -12,16 +12,16 @@ public class CheckoutPage {
 	}
 	
 	@FindBy(id="first-name")
-	WebElement firstname;
+	private WebElement firstname;
 	
 	@FindBy(id="last-name")
-	WebElement lastname;
+	private WebElement lastname;
 	
 	@FindBy(id="postal-code")
-	WebElement zipcode;
+	private WebElement zipcode;
 	
 	@FindBy(id="continue")
-	WebElement continuebutn;
+	private WebElement continuebutn;
 	
 	public void enterFistname(String firstname1) {
 		firstname.sendKeys(firstname1);

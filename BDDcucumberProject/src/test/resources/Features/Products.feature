@@ -3,10 +3,10 @@ Feature: Add, remove and checkout Products
 Background: launch the app and login
 Given Open the url "https://www.saucedemo.com/" 
 And user enter invalid username "standard_user" and password "secret_sauce"
-And Click on login
+When Click on login
 Then User should be redirected to "https://www.saucedemo.com/inventory.html"
 
-@check
+@Add
 Scenario: Adding products to the cart 
 When Click on AddToCart button for Items
 |Items|
@@ -17,7 +17,7 @@ Then Items should be added to cart
 |Sauce Labs Backpack|
 |Sauce Labs Bike Light|
 
-@demo2
+@Remove
 Scenario: Removing products from the cart 
 When Click on AddToCart button for Items
 |Items|
@@ -36,7 +36,7 @@ Then Items should be removed from cart
 |Sauce Labs Backpack|
 |Sauce Labs Bike Light|
 
-@run
+@Checkout
 Scenario: Checkout products in the cart 
 When Click on AddToCart button for Items
 |Items|
@@ -53,4 +53,3 @@ And Click on continue button
 Then User should be redirected to "https://www.saucedemo.com/checkout-step-two.html"
 When click on finish button
 Then Message should be "THANK YOU FOR YOUR ORDER"
-

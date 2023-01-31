@@ -90,15 +90,23 @@
 			<artifactId>gherkin</artifactId>
 			<version>25.0.2</version>
 		</dependency>
+		
+<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-	<!--	<dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.7.0</version>
 			<scope>test</scope>
 		</dependency>
-		-->
+		
 
          <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
                

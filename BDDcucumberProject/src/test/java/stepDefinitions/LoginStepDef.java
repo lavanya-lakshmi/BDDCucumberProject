@@ -3,12 +3,12 @@ package stepDefinitions;
 import org.testng.Assert;
 
 import Context.TestContext;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginStepDef extends BaseClass {
-	
 	
 	TestContext testContext;
 	public LoginStepDef(TestContext context) {
@@ -18,8 +18,9 @@ public class LoginStepDef extends BaseClass {
 		productsPg=	testContext.getPageObjectManager().getProductsPage();
 		cartPg=	testContext.getPageObjectManager().getCartPage();
 	}
-	  
-	@Given("Open the url {string}") public void Open_the_url(String url) {
+	 
+	@Given("Open the url {string}") 
+	public void Open_the_url(String url) {
 	  driver.get(url);
 	 }
 	 
